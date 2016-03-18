@@ -1,0 +1,24 @@
+{
+  "name": "hexo-theme-brass",
+  "version": "1.0.0",
+  "description": "A simple colorful blog theme for Hexo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxRoecker/hexo-theme-brass.git"
+  },
+  "keywords": [
+    "theme",
+    "blog",
+    "hexo"
+  ],
+  "author": "Max Naegeler Roecker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MaxRoecker/hexo-theme-brass/issues"
+  },
+  "homepage": "https://github.com/MaxRoecker/hexo-theme-brass#readme"
+}
