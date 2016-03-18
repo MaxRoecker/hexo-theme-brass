@@ -1,0 +1,39 @@
+site:
+  powered_by: Feito com ❤️ e provido por
+  rss_feed: RSS Feed
+  search: Busca
+
+index:
+  recent_posts: Publicações recentes
+
+pagination:
+  page: Página
+  page_n: "Página %d"
+  newer: Recente
+  older: Antigo
+  previous: Anterior
+  next: Próximo
+  
+post:
+  published_at: Publicado em
+  
+tags:
+  tag: Tag
+  tags: Tags
+  tagged_in: Marcado em
+  tagcloud: Nuvem de Tags
+  
+categories:
+  categories: Categorias
+  category: Categoria
+
+archive:
+  archive: Arquivo
+  archive_n: "Arquivo: %s"
+
+comments:
+  comment: Comentário
+  comments: Commentários
+  
+social:
+  share: Compartilhe

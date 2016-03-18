@@ -1,0 +1,40 @@
+<footer id="footer">
+  <section class="container height--100 padding--2rem">
+    <div class="row center-xs top-xs height--100">
+      <div class="col-xs-3 col-sm-3 col-md-2 col-lg-1 ">
+        {% if site.data.meta.author.photo %}
+        <img class="bio__photo" src="{{ site.data.meta.author.photo }}">
+        {% endif %}
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-5 col-lg-6 ">
+        {% if site.data.meta.author.bio %}
+        <h2 class="bio__header">{{site.data.meta.author.bio.header}}</h2>
+        <div class="bio__intro">
+          {{ markdown( site.data.meta.author.bio.content ) }}
+        </div>
+        {% endif %}
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 ">
+        {% if site.data.meta.author.intro %}
+        <h2 class="bio__header">{{site.data.meta.author.intro.header}}</h2>
+        <div class="bio__intro">
+          {{ markdown( site.data.meta.author.intro.content ) }}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+  
+  <section class="disclaimer">
+    <div class="container">
+      {% if site.data.meta.site.license.text %}
+      {{ markdown( site.data.meta.site.license.text ) }}
+      {% endif %}
+    </div>
+    <div class="container">
+      {{ __('site.powered_by') }}
+      <a href="https://hexo.io/" rel="nofollow">Hexo</a>
+    </div>
+  </section>
+  
+</footer>

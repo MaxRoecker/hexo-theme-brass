@@ -1,0 +1,17 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Website",
+  "publisher": "{{ meta.site }}",
+  "url": "{{ meta.url }}",
+  "description": "{{ meta.description }}",
+  "license": "{{ meta.license }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ author.name }}",
+    "url": "{{ author.url }}",
+    "sameAs": null,
+    "description": "{{ author.description }}"
+  },
+}
+</script>

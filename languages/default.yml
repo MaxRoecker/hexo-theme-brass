@@ -1,0 +1,39 @@
+site:
+  powered_by: Made with ❤️ and powered by
+  rss_feed: RSS Feed
+  search: Search
+
+index:
+  recent_posts: Recent posts
+
+pagination:
+  page: Page
+  page_n: "Page %d"
+  newer: Newer
+  older: Older
+  previous: Previous
+  next: Next
+  
+post:
+  published_at: Published at
+  
+tags:
+  tag: Tag
+  tags: Tags
+  tagged_in: Tagged in
+  tagcloud: Tag Cloud
+  
+categories:
+  categories: Categories
+  category: Category
+
+archive:
+  archive: Archive
+  archive_n: "Archive: %s"
+
+comments:
+  comment: Comment
+  comments: Comments
+  
+social:
+  share: Share

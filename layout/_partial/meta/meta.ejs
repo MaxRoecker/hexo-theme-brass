@@ -1,0 +1,97 @@
+<%
+var TYPES = {
+  WEBSITE: 'WebSite',
+  ARTICLE: 'Article'
+};
+
+function generateMeta() {
+  'use strict';
+  var defaultImage = config.url + '/images/defaultcover.png',
+      sitename, type, title, description,
+      href, image, publishedTime, keywords, license;
+  
+  sitename = config.title + ((config.subtitle)? ' — ' + config.subtitle : '');
+  type = ( is_post() )? TYPES.ARTICLE : TYPES.WEBSITE;
+  title = ( page.title )? page.title : sitename;
+  description = ( page.description )? page.description : config.description;
+  href = url;
+  publishedTime = ( page.date )? date_xml(page.date) : undefined;
+  if ( page.tags ) {
+    keywords = page.tags.map(function( t ) {
+      return t.name;
+    });
+  } else {
+    keywords = undefined;
+  }
+  
+  if ( is_home() ) {
+    image = defaultImage;
+  } else if ( is_post() ) {
+    image = ( page.cover )? page.permalink + page.cover : defaultImage;
+  } else {
+    if ( page.cover ) {
+      image = url.substring( 0, url.lastIndexOf('index.html') ) + 'index/' + page.cover;
+    } else {
+      image = defaultImage;
+    }
+  }
+  
+  if (
+    site.data.meta
+    && site.data.meta.site
+    && site.data.meta.site.license
+    && site.data.meta.site.license.url
+  ) {
+    license = site.data.meta.site.license.url;
+  } else {
+    license  = '';
+  }
+  
+  
+
+  return {
+    site: sitename,
+    type: type,
+    title: title,
+    description: description,
+    url: href,
+    image: image,
+    publishedTime: publishedTime,
+    tags: keywords,
+    license: license
+  };
+};
+
+function generateAuthor() {
+  var name, url, description;
+  
+  name = config.author;
+  url = config.url;
+  if (
+    site.data.meta
+    && site.data.meta.author
+    && site.data.meta.author.bio
+    && site.data.meta.author.bio.content
+  ) {
+    description = site.data.meta.author.bio.content;
+  } else {
+    description = config.url;
+  }
+  
+  return {
+    name: name,
+    url: url,
+    description: description
+  };
+}
+
+var meta = generateMeta();
+var author = generateAuthor();
+%>
+<%- partial('opengraph.swig', { meta: meta, TYPES: TYPES }) %>
+<%- partial('twittercard.swig', { meta: meta, TYPES: TYPES }) %>
+<% if ( meta.type === TYPES.ARTICLE ) { %>
+<%- partial('jsonld--article.swig', { meta: meta, author: author, TYPES: TYPES }) %>
+<%} else {%>
+<%- partial('jsonld--website.swig', { meta: meta, author: author, TYPES: TYPES }) %>
+<%}%>
