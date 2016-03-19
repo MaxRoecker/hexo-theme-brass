@@ -2,8 +2,8 @@
   <article class="post">
     <header>
       <div class="post__header"
-           {% if page.cover %}
-           style="background-image: url('index/{{ page.cover }}');
+           {% if page.cover.path %}
+           style="background-image: url('index/{{ page.path }}');
                   background-size: cover;
                   background-position: center;"{% endif %}>
         <div class="post__cover">
@@ -21,6 +21,26 @@
         </div>
       </div>
     </section>
+    
+    <footer>
+      <div class="container">
+        <section class="social">
+          {% if ( page.cover.src || page.cover.title ) %}
+          <p>
+            {{ __( 'site.image') }}:
+            <a class="social-a" rel="nofollow" href="{{ (page.cover.src || '#') }}">
+              {{ ( page.cover.title || 'Imagem' ) }}
+            </a>
+          </p>
+          {% endif %}
+          <p>
+            {{ __( 'social.share' ) }}:
+            {{ partial( '_partial/social--twitter', { url: url, title: page.title } ) }}
+            {{ partial( '_partial/social--facebook', { url: url } ) }}
+          </p>
+        </section>
+      </div>
+    </footer>
     
   </article>
 </main>
