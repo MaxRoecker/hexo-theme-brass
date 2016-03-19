@@ -27,10 +27,10 @@ function generateMeta() {
   if ( is_home() ) {
     image = defaultImage;
   } else if ( is_post() ) {
-    image = ( page.cover )? page.permalink + page.cover : defaultImage;
+    image = ( page.cover && page.cover.path )? page.permalink + page.cover.path : defaultImage;
   } else {
-    if ( page.cover ) {
-      image = url.substring( 0, url.lastIndexOf('index.html') ) + 'index/' + page.cover;
+    if ( page.cover && page.cover.path ) {
+      image = url.substring( 0, url.lastIndexOf('index.html') ) + 'index/' + page.cove.path;
     } else {
       image = defaultImage;
     }
