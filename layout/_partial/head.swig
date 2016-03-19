@@ -5,8 +5,7 @@
 {% endif %}
 
 <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'/>
-<link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/monokai-sublime.min.css' rel='stylesheet' type='text/css'/>
-{{ css( [ 'css/normalize', 'css/flexboxgrid.css', 'css/styles.css' ] ) }}
+{{ css( [ 'css/normalize', 'css/flexboxgrid.css', 'css/styles.css', 'css/monokai-sublime.css' ] ) }}
 
 <link rel="canonical" href="{{ url }}" />
 <meta name="referrer" content="origin">
