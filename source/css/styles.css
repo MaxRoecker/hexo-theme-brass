@@ -490,6 +490,15 @@
   font-size: 1rem;
   color: var(--disabled-text);
 }
+.social-a {
+  text-decoration: none;
+  color: var(--secondary-text);
+}
+.social-a:hover {
+  text-decoration: none;
+  color: var(--primary-text);
+}
+
 .social-link {
   display: inline-flex;
   margin: 0 0.2rem;

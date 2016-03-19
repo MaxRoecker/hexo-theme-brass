@@ -2,6 +2,7 @@ site:
   powered_by: Made with ❤️ and powered by
   rss_feed: RSS Feed
   search: Search
+  image: Image
 
 index:
   recent_posts: Recent posts

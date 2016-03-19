@@ -1,8 +1,9 @@
 <section class="postpreview--featured"
-         {% if post.cover %}
-         style="background-image: url('{{ post.permalink }}{{ post.cover }}');
+         {% if post.cover.path -%}
+         style="background-image: url('{{ post.permalink }}{{ post.cover.path }}');
                 background-size: cover;
-                background-position: center;"{% endif %}>
+                background-position: center;"
+         {%- endif -%}>
   <div class="postpreview__cover--featured">
     <div class="container postpreview__container--featured">
       <header class="postpreview__header--featured">

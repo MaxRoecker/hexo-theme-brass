@@ -103,11 +103,19 @@ featured: true
 ```
 
 ###Cover Image
-To customize the cover image of your blog post/page, you must set the `cover` property in front-matter with the relative path to your image. **It's required to set the `post_asset_folder: true` in your `config.file` and save your image at post asset directory**. Example:
+To customize the cover image of your blog post/page, you must set the `cover` property in front-matter. **It's required to set the `post_asset_folder: true` in your `config.file` and save your image at post asset directory**. See the sample code bellow:
 ``` yml
 # Image cover.img is inside post asset folder
-cover: 'cover.img'
+cover:
+  path: 'cover.img'
+  title: 'A very nice cover'
+  src: 'http://source.cover.com'
 ```
+
+* `cover.path`: relative path of the cover image inside post asset directory
+* `cover.title`: The title or name of the cover image.
+* `cover.src`: The source of the image, the URI where the the cover image can be found. If this property is empty, it's assumed that the blog itself is the source of the image.
+
 
 ###Post Description
 To custom post/page description, set the `description` property in post/page front-matter with as string. Example:

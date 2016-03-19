@@ -2,6 +2,7 @@ site:
   powered_by: Feito com ❤️ e provido por
   rss_feed: RSS Feed
   search: Busca
+  image: Imagem
 
 index:
   recent_posts: Publicações recentes
