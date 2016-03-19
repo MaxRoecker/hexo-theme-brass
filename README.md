@@ -114,7 +114,7 @@ cover:
 
 * `cover.path`: relative path of the cover image inside post asset directory
 * `cover.title`: The title or name of the cover image.
-* `cover.src`: The source of the image, the URI where the the cover image can be found. If this property is empty, it's assumed that the blog itself is the source of the image.
+* `cover.src`: The source of the image, the URI where the cover image can be found. If this property is empty, it's assumed that the blog itself is the source of the image.
 
 
 ###Post Description
