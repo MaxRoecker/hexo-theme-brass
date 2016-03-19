@@ -10,12 +10,12 @@
 ##Setup
 **Brass theme requires Hexo 3.2.0 or above**
 
-1 - In your Hexo blog directory, install theme by cloning the repository:
+1. In your Hexo blog directory, install theme by cloning the repository:
 ``` bash
 $ git clone https://github.com/MaxRoecker/hexo-theme-brass.git themes/brass
 ```
 
-2 - Enable it in your `_config.yml`, setting the `theme` property to `brass`.
+2. Enable it in your `_config.yml`, setting the `theme` property to `brass`.
 ``` yml
 # Hexo Configuration file: "_config.yml"
 # ...
@@ -135,8 +135,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae quam fringi
 
 ---
 ##Roadmap
-1 - Build a consistent development environment and development a setup, with test and lint tools for code.
-2 - Build Categories and Archive custom pages.
+1. Build a consistent development environment and development a setup, with test and lint tools for code.
+2. Build Categories and Archive custom pages.
 
 ---
 ##License
