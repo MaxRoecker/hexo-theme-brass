@@ -10,12 +10,12 @@
 ##Setup
 **Brass theme requires Hexo 3.2.0 or above**
 
-1. In your Hexo blog directory, install theme by cloning the repository:
+1) In your Hexo blog directory, install theme by cloning the repository:
 ``` bash
 $ git clone https://github.com/MaxRoecker/hexo-theme-brass.git themes/brass
 ```
 
-2. Enable it in your `_config.yml`, setting the `theme` property to `brass`.
+2) Enable it in your `_config.yml`, setting the `theme` property to `brass`.
 ``` yml
 # Hexo Configuration file: "_config.yml"
 # ...
