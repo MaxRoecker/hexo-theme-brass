@@ -1,0 +1,9 @@
+<%
+  var text = encodeURIComponent(( is_post() )? page.title + ' — ' : page.title + ' · ' +  config.title + ' — '),
+      uri = encodeURIComponent( url.substring( 0, url.lastIndexOf('index.html') ) );
+%>
+<a class="social-link social-link--twitter"
+   href="#"
+   onclick="window.open('https://twitter.com/intent/tweet?text=<%- text %>&url=<%- uri %>', 'twitter-share-dialog', 'width=500,height=420'); return false;">
+Twitter
+</a>

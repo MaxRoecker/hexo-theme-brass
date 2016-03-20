@@ -30,7 +30,7 @@ function generateMeta() {
     image = ( page.cover && page.cover.path )? page.permalink + page.cover.path : defaultImage;
   } else {
     if ( page.cover && page.cover.path ) {
-      image = url.substring( 0, url.lastIndexOf('index.html') ) + 'index/' + page.cove.path;
+      image = url.substring( 0, url.lastIndexOf('index.html') ) + 'index/' + page.cover.path;
     } else {
       image = defaultImage;
     }
