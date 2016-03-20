@@ -1,8 +1,8 @@
 <main>
   {% if ( page.current === 1 ) %}
   <section>
-    {% for post in site.posts %}
     <ul class="list--unstyled">
+    {% for post in site.posts %}
       {% if ( post.featured ) %}
       <li>
         {{
@@ -13,20 +13,23 @@
         }}
       </li>
       {% endif %}
-    </ul>
     {% endfor %}
+    </ul>
   </section>
   <div class="container text-align--center">
     <div class="continue">&#8250;</div>
   </div>
   
   {% else %}
-    <header class="header">
-      <div class="container">
-        <h1 class="header__title">{{ __( 'index.recent_posts' ) }}</h1>
-      </div>
-    </header>
+  
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title">{{ __( 'index.recent_posts' ) }}</h1>
+    </div>
+  </header>
+  
   {% endif %}
+  
   <section>
     <div class="container">
       <ul class="postlist">
