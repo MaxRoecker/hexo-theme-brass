@@ -2,22 +2,28 @@
   <header class="header">
     <div class="container">
       <h1 class="header__title">
-        {{ __( 'index.recent_posts') }}:
-        #{{ page.tag }}
+        {{ __( 'archive.archive' ) }}
+        {% if page.year %}
+        — {% if page.month %}
+        {{ page.month }}/{{ page.year }}
+        {% else %}
+        {{ page.year }}
+        {% endif %}
+        {% endif %}
       </h1>
     </div>
   </header>
   <section>
     <div class="container">
-      <ul class="postlist row">
+      <ul class="postlist">
         {% for post in page.posts %}
           <li class="postlist__item">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            {{partial(
+            {{
+              partial(
                 '_partial/post-preview',
                 { post: post }
-              )}}
-            </div>
+              )
+            }}
           </li>
         {% endfor %}
       </ul>
@@ -27,5 +33,4 @@
   <div class="container">
     {{ partial( '_partial/pagination', { page: page } ) }}
   </div>
-  
 </main>
