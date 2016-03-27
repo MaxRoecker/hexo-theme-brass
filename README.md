@@ -7,7 +7,7 @@
 * SEO friendly, with build-in [Twitter cards](https://dev.twitter.com/cards/overview) and Facebook [Open Graph](https://developers.facebook.com/docs/sharing/opengraph) meta tags as well [JSON-ld metadata](https://developers.google.com/structured-data/rich-snippets/articles#examples).
 
 ---
-##Setup
+## Setup
 **Brass theme requires Hexo 3.2.0 or above**
 
 1) In your Hexo blog directory, install theme by cloning the repository:
@@ -25,10 +25,10 @@ theme: brass
 
 
 ---
-##Configuration
+## Configuration
 The configuration is based on [Hexo Data Files](https://hexo.io/docs/data-files.html). First of all, it's need to create an `meta.yml` in your `_data` directory.
 
-###Author
+### Author
 **Brass** theme extends the information about author of the blog. To configure the new blog's author information, in your `meta.yml` file, create the following structure:
 
 ``` yml
@@ -49,7 +49,7 @@ author:
 * `author.intro.header`: The header of the intro section in the footer.
 * `author.intro.content`: The content of the intro section in the footer.
 
-###Website
+### Website
 You can change site configuration like menu, logo or license with the following configuration.
 
 ``` yml
@@ -72,11 +72,17 @@ menu:
   About: '/about/'
   More Posts: '/blog/page/2/'
 ```
+### Analytics
+In order to link your blog with Google Analytics, you should set in your `meta` file the property `googleAnalytics.id` with the Google Analytics ID. See below:
+```yml
+googleAnalytics:
+  id: 'UA-########-#'
+```
 
-###Social
+### Social
 To add custom social meta-tags — like [Twitter cards](https://dev.twitter.com/cards/overview) or Facebook [Open Graph](https://developers.facebook.com/docs/sharing/opengraph) — and link the content to your profile at social networks, you must set the following configurations.
 
-####Twitter
+#### Twitter
 ``` yml
 twitter:
   site:
@@ -85,15 +91,17 @@ twitter:
 * `twitter.site`: The site Twitter user.
 * `twitter.creator`: The author's Twitter user.
 
-###Facebook
+#### Facebook
 ``` yml
 facebook:
   profile:
 ```
 * `facebook.profile`: The URL of author's Facebook profile.
 
+
+
 ---
-##Customize posts/pages
+## Customize posts/pages
 The **Brass** theme provides a way to customize blog posts and pages by setting configurations properties in post [Front-matter](https://hexo.io/docs/front-matter.html).
 
 ###Featured posts
