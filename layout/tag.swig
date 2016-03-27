@@ -9,15 +9,15 @@
   </header>
   <section>
     <div class="container">
-      <ul class="postlist row">
+      <ul class="postlist">
         {% for post in page.posts %}
           <li class="postlist__item">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            {{partial(
+            {{
+              partial(
                 '_partial/post-preview',
                 { post: post }
-              )}}
-            </div>
+              )
+            }}
           </li>
         {% endfor %}
       </ul>

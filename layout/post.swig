@@ -26,12 +26,10 @@
             {{ date( page.date, 'DD/MM/YYYY' ) }}
           </time>
           {% if page.tags.length %}
-          — {{ __( 'tags.tagged_in' ) }}
+          — <span>{{ __( 'tags.tagged_in' ) }} </span>
           <ul class="taglist--inline">
             {% for tag in page.tags %}
-            <li class="taglist__item--inline">
-              <a href="{{ tag.path }}" class="tag">{{ tag.name }}</a>
-            </li>
+            <li class="taglist__item--inline"> <a href="{{ config.url }}/{{ tag.path }}" class="tag">{{ tag.name }}</a></li>
             {% endfor %}
           </ul>
           {% endif %}
