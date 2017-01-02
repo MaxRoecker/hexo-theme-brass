@@ -787,15 +787,12 @@
   border-radius: 0;
   background-color: transparent;
   font-size: 1rem;
+  color: var(--primary-text-inverse);
+  line-height: 1.25em;
 }
 
 .post__content code {
-  display: inline-block;
-  padding: 0 0.5rem;
-  border-radius: 0.2rem;
-  background-color: var(--primary-text);
-  font-size: 1rem;
-  color: var(--primary-text-inverse);
+  color: var(--secondary-text);
 }
 
 .post__content kbd {
