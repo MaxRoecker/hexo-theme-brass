@@ -1,0 +1,39 @@
+<main>
+  <% if ( page.current === 1 ) { %>
+  <section>
+    <ul class="list--unstyled">
+    <% site.posts.filter(function (post) {return post.featured}).each(function (post) { %>
+      <li>
+        <%- partial('_partial/post-preview--featured', {post: post}) %>
+      </li>
+    <% }) %>
+    </ul>
+  </section>
+  <div class="container text-align--center">
+    <div class="continue">&#8250;</div>
+  </div>
+  <% } else { %>
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title"><%= __( 'index.recent_posts' ) %></h1>
+    </div>
+  </header>
+  <% } %>
+
+  <section>
+    <div class="container">
+      <ul class="postlist">
+        <% page.posts.forEach(function (post) { %>
+          <li class="postlist__item">
+            <%- partial('_partial/post-preview', {post: post}) %>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </section>
+
+  <div class="container">
+    <%- partial('_partial/pagination', {page: page}) %>
+  </div>
+
+</main>

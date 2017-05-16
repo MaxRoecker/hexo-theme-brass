@@ -1,0 +1,30 @@
+<section class="postpreview">
+  <header class="postpreview__header">
+    <h1 class="margin-zero">
+      <a href="<%= url_for(post.path) %>" class="postpreview__title">
+        <time class="postpreview__date" datetime="<%= date_xml(post.date) %>">
+          <%= date(post.date, 'DD/MM/YYYY') %>
+        </time>
+        <br/>
+        <span><%= post.title %></span>
+      </a>
+    </h1>
+  </header>
+  <p class="postpreview__excerpt">
+    <% if (post.description != null) { %>
+      <%= post.description %>
+    <% } else { %>
+      <%= post.excerpt %>
+    <% } %>
+  </p>
+  <footer class="postpreview__footer">
+    <% if (post.tags.length != null) { %>
+    <span><%= __( 'tags.tagged_in' ) %></span>
+    <ul class="taglist--inline">
+      <% post.tags.forEach(function (tag) { %>
+      <li class="taglist__item--inline"><a href="<%= config.url %>/<%= tag.path %>" class="tag"><%= tag.name %></a></li>
+      <% }) %>
+    </ul>
+    <% } %>
+  </footer>
+</section>

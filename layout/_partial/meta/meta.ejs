@@ -9,7 +9,7 @@ function generateMeta() {
   var defaultImage = config.url + '/images/defaultcover.png',
       sitename, type, title, description,
       href, image, publishedTime, keywords, license;
-  
+
   sitename = config.title + ((config.subtitle)? ' — ' + config.subtitle : '');
   type = ( is_post() )? TYPES.ARTICLE : TYPES.WEBSITE;
   title = ( page.title )? page.title : sitename;
@@ -23,7 +23,7 @@ function generateMeta() {
   } else {
     keywords = undefined;
   }
-  
+
   if ( is_home() ) {
     image = defaultImage;
   } else if ( is_post() ) {
@@ -35,7 +35,7 @@ function generateMeta() {
       image = defaultImage;
     }
   }
-  
+
   if (
     site.data.meta
     && site.data.meta.site
@@ -46,8 +46,8 @@ function generateMeta() {
   } else {
     license  = '';
   }
-  
-  
+
+
 
   return {
     site: sitename,
@@ -64,7 +64,7 @@ function generateMeta() {
 
 function generateAuthor() {
   var name, url, description;
-  
+
   name = config.author;
   url = config.url;
   if (
@@ -77,7 +77,7 @@ function generateAuthor() {
   } else {
     description = config.url;
   }
-  
+
   return {
     name: name,
     url: url,
@@ -88,10 +88,10 @@ function generateAuthor() {
 var meta = generateMeta();
 var author = generateAuthor();
 %>
-<%- partial('opengraph.swig', { meta: meta, TYPES: TYPES }) %>
-<%- partial('twittercard.swig', { meta: meta, TYPES: TYPES }) %>
+<%- partial('opengraph.ejs', { meta: meta, TYPES: TYPES }) %>
+<%- partial('twittercard.ejs', { meta: meta, TYPES: TYPES }) %>
 <% if ( meta.type === TYPES.ARTICLE ) { %>
-<%- partial('jsonld--article.swig', { meta: meta, author: author, TYPES: TYPES }) %>
+<%- partial('jsonld--article.ejs', { meta: meta, author: author, TYPES: TYPES }) %>
 <%} else {%>
-<%- partial('jsonld--website.swig', { meta: meta, author: author, TYPES: TYPES }) %>
+<%- partial('jsonld--website.ejs', { meta: meta, author: author, TYPES: TYPES }) %>
 <%}%>

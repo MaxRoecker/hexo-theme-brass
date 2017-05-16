@@ -1,0 +1,8 @@
+<% if (page.title != null) { %>
+<title><%= page.title %> — <%= config.title %><% if (config.subtitle) { %> - <%= config.subtitle%><% }%></title>
+<% } else { %>
+<title><%= config.title %></title>
+<% } %>
+<%- partial('meta/meta', {config: config, page: page}) %>
+<meta name="referrer" content="origin">
+<meta name="generator" content="Hexo 3.2.0" />
