@@ -45,6 +45,15 @@
     <footer>
       <div class="container">
         <section class="social">
+          <p>
+            <amp-social-share
+                type="twitter"></amp-social-share>
+            <amp-social-share
+                type="facebook"
+                data-param-app_id="1504341679629268"></amp-social-share>
+            <amp-social-share
+                type="linkedin"></amp-social-share>
+          </p>
           <% if (page.cover.src != null || page.cover.title != null) { %>
           <p>
             <%= __('site.image') %>:
@@ -53,11 +62,6 @@
             </a>
           </p>
           <% } %>
-          <p>
-            <%= __('social.share' ) %>:
-            <%- partial('_partial/social--twitter', {url: url, title: page.title}) %>
-            <%- partial('_partial/social--facebook', {url: url}) %>
-          </p>
         </section>
       </div>
     </footer>
